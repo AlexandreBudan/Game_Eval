@@ -12,7 +12,7 @@ public class CharacBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity += new Vector2(vitesse, 0);
+        setVelocity(vitesse, 0);
     }
 
     // Update is called once per frame
@@ -22,6 +22,12 @@ public class CharacBehavior : MonoBehaviour
         {
             Jump();
         }
+    }
+
+    public void setVelocity(float xVelocity, float yVelocity)
+    {
+        rb.velocity = new Vector2(0, 0);
+        rb.velocity += new Vector2(xVelocity, yVelocity);
     }
 
     public void Jump()
@@ -43,5 +49,21 @@ public class CharacBehavior : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            startCoroutine(ObstacleFind());
+        }
+    }
+
+    IEnumerator ObstacleFind()
+    {
+        yield return new WaitForSeconds(0.1f);
+        setVelocity(vitesse/2, 0);
+        yield return new WaitForSeconds(0.5f);
+        setVelocity(vitesse, 0);
     }
 }
