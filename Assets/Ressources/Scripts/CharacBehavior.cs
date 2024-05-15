@@ -8,6 +8,7 @@ public class CharacBehavior : MonoBehaviour
     public float vitesse;
     public float maxJump;
     private bool isGrounded = false;
+    public float VulnerabilityTime;
 
     // Start is called before the first frame update
     void Start()
@@ -62,8 +63,11 @@ public class CharacBehavior : MonoBehaviour
     IEnumerator ObstacleFind()
     {
         yield return new WaitForSeconds(0.1f);
+        GameObject.FindWithTag("Monster").GetComponent<MonsterSystem>().GoCloser();
         setVelocity(vitesse/2, 0);
         yield return new WaitForSeconds(0.5f);
         setVelocity(vitesse, 0);
+        yield return new WaitForSeconds(VulnerabilityTime);
+        GameObject.FindWithTag("Monster").GetComponent<MonsterSystem>().GoFurther();
     }
 }
