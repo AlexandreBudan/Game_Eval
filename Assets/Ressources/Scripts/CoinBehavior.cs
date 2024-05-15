@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class CoinsBehavior : MonoBehaviour
 {
     public int value = 1;
-    private TextMeshProUGUI coinText;
+    private Text coinText;
     private GameObject UI;
     public Animator animator;
 
@@ -14,7 +14,7 @@ public class CoinsBehavior : MonoBehaviour
     void Start()
     {
         UI = GameObject.FindGameObjectWithTag("CoinAmount");
-        coinText = UI.GetComponent<TextMeshProUGUI>();
+        coinText = UI.GetComponent<Text>();
     }
 
     // Update is called once per frame

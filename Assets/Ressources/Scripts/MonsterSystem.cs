@@ -5,6 +5,11 @@ using UnityEngine;
 public class MonsterSystem : MonoBehaviour
 {
     public GameObject player;
+    public Animator animator;
+    public bool isKilling = false;
+    private int state = 0;
+    public GameObject canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +20,26 @@ public class MonsterSystem : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(player.transform.position.x - 4.5f, -2.3f, -1);
+        if (isKilling)
+        {
+            KillPlayer();
+        }
+    }
+
+    public void GoFurther()
+    {
+        state--;
+        animator.SetInteger("State", state);
+    }
+
+    public void GoCloser()
+    {
+        state++;
+        animator.SetInteger("State", state);
+    }
+
+    public void KillPlayer()
+    {
+        canvas.GetComponent<CanvasManager>().GameOver();
     }
 }

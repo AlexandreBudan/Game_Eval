@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class CoinAmount : MonoBehaviour
 {
-    private TextMeshProUGUI coinText;
+    private Text coinText;
     // Start is called before the first frame update
     void Start()
     {
-        coinText = gameObject.GetComponent<TextMeshProUGUI>();
-        coinText.text = PlayerPrefs.GetInt("CoinAmount", 0).ToString();
+        coinText = gameObject.GetComponent<Text>();
+        coinText.text = "0";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            Debug.Log("Trésor Sauvegardé");
-            PlayerPrefs.SetInt("CoinAmount", int.Parse(coinText.text));
-        }
+    }
+
+    public void SaveCoin()
+    {
+        int coinAlreadyCollected = PlayerPrefs.GetInt("CoinAmount");
+        PlayerPrefs.SetInt("CoinAmount", coinAlreadyCollected + int.Parse(coinText.text));
     }
 }
