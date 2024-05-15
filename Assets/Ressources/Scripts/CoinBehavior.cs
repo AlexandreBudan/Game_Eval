@@ -8,6 +8,7 @@ public class CoinsBehavior : MonoBehaviour
     public int value = 1;
     private TextMeshProUGUI coinText;
     private GameObject UI;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class CoinsBehavior : MonoBehaviour
         {
             int currentAmount = int.Parse(coinText.text) + value;
             coinText.text = currentAmount.ToString();
-            Destroy(gameObject);
+            animator.SetBool("IsCollect", true);
         }
     }
 }

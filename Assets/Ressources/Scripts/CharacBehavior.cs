@@ -55,7 +55,7 @@ public class CharacBehavior : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            // startCoroutine(ObstacleFind());
+            StartCoroutine(ObstacleFind());
         }
     }
 
