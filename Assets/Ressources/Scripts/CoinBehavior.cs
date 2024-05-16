@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CoinsBehavior : MonoBehaviour
 {
-    public int value = 1;
+    public int value = 0;
     private Text coinText;
     private GameObject UI;
     public Animator animator;

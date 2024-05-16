@@ -45,8 +45,8 @@ public class CanvasManager : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("MainScene");
+        Time.timeScale = 1;
     }
 
     public void GameOver()

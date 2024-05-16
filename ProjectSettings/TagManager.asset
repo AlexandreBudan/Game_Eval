@@ -8,6 +8,9 @@ TagManager:
   - CoinAmount
   - Obstacle
   - Monster
+  - WavePoint
+  - Wave
+  - Canvas
   layers:
   - Default
   - TransparentFX

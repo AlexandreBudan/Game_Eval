@@ -34,6 +34,7 @@ public class CharacBehavior : MonoBehaviour
     public void Jump()
     {
         rb.velocity += new Vector2(0, maxJump);
+        isGrounded = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

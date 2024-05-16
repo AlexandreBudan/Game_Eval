@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class KillZone : MonoBehaviour
+public class DeleteWave : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,11 +16,11 @@ public class KillZone : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("WavePoint"))
         {
-            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().GameOver();
+            Destroy(GameObject.FindWithTag("Wave"));
         }
     }
 }
