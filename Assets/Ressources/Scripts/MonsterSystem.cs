@@ -24,7 +24,6 @@ public class MonsterSystem : MonoBehaviour
             transform.position = new Vector3(player.transform.position.x - 4.5f, -2.3f, -1);
             if (isKilling)
             {
-                Debug.Log("Test");
                 KillPlayer();
             }
         }

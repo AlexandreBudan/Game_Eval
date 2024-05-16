@@ -118,7 +118,7 @@ TextureImporter:
         width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,6 +126,69 @@ TextureImporter:
       bones: []
       spriteID: be9d7188871dc464bb64c1f7de6cf9ff
       internalID: -453468355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 96
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e92976a437f22e45b561033595ccfe9
+      internalID: -1496568272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 64
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcae9f9860ee884bb373903d1b6e633
+      internalID: 669847377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 208
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a657ea10b2d14524e81d10d6797db28a
+      internalID: 1155882600
       vertices: []
       indices: 
       edges: []
@@ -142,6 +205,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Slime_0: -453468355
+      Slime_1: -1496568272
+      Slime_2: 669847377
+      Slime_3: 1155882600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

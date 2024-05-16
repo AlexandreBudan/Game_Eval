@@ -908,6 +908,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 852992280441344422, guid: 93a3a603860fd2d4087c15af8610a5fa, type: 3}
+  - {fileID: 852992280441344422, guid: 2ce533ecc0f44814aa3f7afd77a83c91, type: 3}
+  - {fileID: 852992280441344422, guid: 924fc4c3918309442b20aef575e5137b, type: 3}
+  - {fileID: 852992280441344422, guid: 5711f246ec18c5f4a8a49e88188ee0ef, type: 3}
+  - {fileID: 852992280441344422, guid: 6696d789b09b5a742b159b8fcff00e11, type: 3}
+  - {fileID: 852992280441344422, guid: 1e93f3c1885dd294badf82207f7d74c2, type: 3}
+  - {fileID: 852992280441344422, guid: 120eba22e2dbf0b4da5f63f5f50d9565, type: 3}
+  - {fileID: 852992280441344422, guid: e5e7f4945bdf9ce4b905611c1b34f45f, type: 3}
+  - {fileID: 852992280441344422, guid: e7ed8c233e8354e44ad4b13926aec1a6, type: 3}
+  - {fileID: 852992280441344422, guid: c8722ba09a3633f47a68a097c4601fa4, type: 3}
+  - {fileID: 852992280441344422, guid: 289204576e57a264ca2db7cf78c10c09, type: 3}
+  - {fileID: 852992280441344422, guid: e1d5ca47d0d024649884b738dcb190ce, type: 3}
 --- !u!1 &782630925
 GameObject:
   m_ObjectHideFlags: 0
