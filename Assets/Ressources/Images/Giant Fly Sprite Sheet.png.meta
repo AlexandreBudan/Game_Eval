@@ -113,12 +113,12 @@ TextureImporter:
       name: Giant Fly Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 5
         y: 135
-        width: 19
-        height: 18
+        width: 22
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,6 +126,69 @@ TextureImporter:
       bones: []
       spriteID: c3f1e8b46f684e3418b61a8251e654e8
       internalID: 314171138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giant Fly Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 135
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc50839afbc766459ad3b68ad82cd85
+      internalID: 848460339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giant Fly Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 135
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1acb0f3c88f844abaf991050a78897
+      internalID: 1441535438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Giant Fly Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 135
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a09d3506682c04a9dc0110f1347e3a
+      internalID: -205053121
       vertices: []
       indices: 
       edges: []
@@ -142,6 +205,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Giant Fly Sprite Sheet_0: 314171138
+      Giant Fly Sprite Sheet_1: 848460339
+      Giant Fly Sprite Sheet_2: 1441535438
+      Giant Fly Sprite Sheet_3: -205053121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

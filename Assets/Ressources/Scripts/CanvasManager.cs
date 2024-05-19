@@ -11,7 +11,11 @@ public class CanvasManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject gameOverPanel;
     public GameObject coinPanelText;
+    public GameObject coinPanel;
     public GameObject gameOverCoinText;
+    public GameObject gameOverScoreText;
+    public GameObject scorePanel;
+    public GameObject highScore;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +49,8 @@ public class CanvasManager : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("MainScene");
+        Time.timeScale = 1;
     }
 
     public void GameOver()
@@ -54,7 +58,15 @@ public class CanvasManager : MonoBehaviour
         Time.timeScale = 0;
         coinPanelText.GetComponent<CoinAmount>().SaveCoin();
         gameOverCoinText.GetComponent<Text>().text = PlayerPrefs.GetInt("CoinAmount").ToString();
+        gameOverScoreText.GetComponent<Text>().text = scorePanel.transform.Find("ScoreText").GetComponent<Text>().text;
+        if ( int.Parse(gameOverScoreText.GetComponent<Text>().text) > PlayerPrefs.GetInt("HighScore") )
+        {
+            highScore.SetActive(true);
+            PlayerPrefs.SetInt("HighScore", int.Parse(gameOverScoreText.GetComponent<Text>().text));
+        }
         gameOverPanel.SetActive(true);
+        coinPanel.SetActive(false);
+        scorePanel.SetActive(false);
         pauseBtn.SetActive(false);
     }
 }

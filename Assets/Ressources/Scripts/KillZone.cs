@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
-    public GameObject canvas;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,7 @@ public class KillZone : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            canvas.GetComponent<CanvasManager>().GameOver();
+            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().GameOver();
         }
     }
 }

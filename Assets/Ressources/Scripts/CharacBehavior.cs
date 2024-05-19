@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 public class CharacBehavior : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float vitesse;
     public float maxJump;
-    private bool isGrounded = false;
+    public bool isGrounded;
     public float VulnerabilityTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         setVelocity(vitesse, 0);
     }
 
@@ -34,6 +36,7 @@ public class CharacBehavior : MonoBehaviour
     public void Jump()
     {
         rb.velocity += new Vector2(0, maxJump);
+        isGrounded = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -19,10 +19,13 @@ public class MonsterSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.transform.position.x - 4.5f, -2.3f, -1);
-        if (isKilling)
+        if (player != null)
         {
-            KillPlayer();
+            transform.position = new Vector3(player.transform.position.x - 4.5f, -2.3f, -1);
+            if (isKilling)
+            {
+                KillPlayer();
+            }
         }
     }
 
@@ -41,5 +44,6 @@ public class MonsterSystem : MonoBehaviour
     public void KillPlayer()
     {
         canvas.GetComponent<CanvasManager>().GameOver();
+        player = null;
     }
 }
