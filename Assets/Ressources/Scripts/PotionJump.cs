@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PotionJump : MonoBehaviour
@@ -20,6 +21,7 @@ public class PotionJump : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            GameObject.Find("PotionSound").GetComponent<AudioSource>().Play(0);
             col.GetComponent<CharacBehavior>().isGrounded = false;
             Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
             Vector3 velo = rb.velocity;
