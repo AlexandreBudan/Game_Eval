@@ -31,12 +31,15 @@ public class MonsterSystem : MonoBehaviour
 
     public void GoFurther()
     {
+        GameObject.Find("Music").GetComponent<AudioSource>().pitch = 1.30f;
         state--;
         animator.SetInteger("State", state);
     }
 
     public void GoCloser()
     {
+        GameObject.Find("MonsterSound").GetComponent<AudioSource>().Play(0);
+        GameObject.Find("Music").GetComponent<AudioSource>().pitch = 1.45f;
         state++;
         animator.SetInteger("State", state);
     }

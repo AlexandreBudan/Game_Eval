@@ -35,6 +35,7 @@ public class CharacBehavior : MonoBehaviour
 
     public void Jump()
     {
+        GameObject.Find("JumpSound").GetComponent<AudioSource>().Play(0);
         rb.velocity += new Vector2(0, maxJump);
         isGrounded = false;
     }

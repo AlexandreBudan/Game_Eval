@@ -33,6 +33,7 @@ public class CanvasManager : MonoBehaviour
     {
         if (isPause)
         {
+            GameObject.Find("Music").GetComponent<AudioSource>().Play();
             isPause = false;
             Time.timeScale = 1;
             pauseBtn.SetActive(true);
@@ -40,6 +41,7 @@ public class CanvasManager : MonoBehaviour
         }
         else
         {
+            GameObject.Find("Music").GetComponent<AudioSource>().Pause();
             isPause = true;
             Time.timeScale = 0;
             pauseBtn.SetActive(false);
@@ -55,6 +57,8 @@ public class CanvasManager : MonoBehaviour
 
     public void GameOver()
     {
+        GameObject.Find("LoseSound").GetComponent<AudioSource>().Play(0);
+        GameObject.Find("Music").GetComponent<AudioSource>().Stop();
         Time.timeScale = 0;
         coinPanelText.GetComponent<CoinAmount>().SaveCoin();
         gameOverCoinText.GetComponent<Text>().text = PlayerPrefs.GetInt("CoinAmount").ToString();

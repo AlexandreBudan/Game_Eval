@@ -27,6 +27,7 @@ public class CoinsBehavior : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
+            GameObject.Find("CoinSound").GetComponent<AudioSource>().Play(0);
             int currentAmount = int.Parse(coinText.text) + value;
             coinText.text = currentAmount.ToString();
             animator.SetBool("IsCollect", true);
