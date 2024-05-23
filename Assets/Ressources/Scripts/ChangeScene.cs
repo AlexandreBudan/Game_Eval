@@ -20,6 +20,10 @@ public class ChangeScene : MonoBehaviour
 
     public void ChangeSceneByName()
     {
+        if (SceneName == "MainScene")
+        {
+            GameObject.Find("WindSound").GetComponent<AudioSource>().Stop();
+        }
         SceneManager.LoadScene(SceneName);
     }
 }
