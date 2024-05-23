@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CanvasManager : MonoBehaviour
 {
     private bool isPause = false;
+    private bool isConf = false;
     public GameObject pauseBtn;
     public GameObject pausePanel;
     public GameObject gameOverPanel;
@@ -15,6 +16,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject gameOverCoinText;
     public GameObject gameOverScoreText;
     public GameObject scorePanel;
+    public GameObject confPanel;
     public GameObject highScore;
 
     // Start is called before the first frame update
@@ -46,6 +48,20 @@ public class CanvasManager : MonoBehaviour
             Time.timeScale = 0;
             pauseBtn.SetActive(false);
             pausePanel.SetActive(true);
+        }
+    }
+
+    public void ConfigDisplay()
+    {
+        if (isConf)
+        {
+            isConf = false;
+            confPanel.SetActive(false);
+        }
+        else
+        {
+            isConf = true;
+            confPanel.SetActive(true);
         }
     }
 
