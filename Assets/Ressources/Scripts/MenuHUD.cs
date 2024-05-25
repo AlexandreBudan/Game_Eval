@@ -8,6 +8,8 @@ public class MenuHUD : MonoBehaviour
 {
     public GameObject CoinPanel;
     public GameObject HighScorePanel;
+    public GameObject confPanel;
+    private bool isConf = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +21,19 @@ public class MenuHUD : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void ConfigDisplay()
+    {
+        if (isConf)
+        {
+            isConf = false;
+            confPanel.SetActive(false);
+        }
+        else
+        {
+            isConf = true;
+            confPanel.SetActive(true);
+        }
     }
 }
