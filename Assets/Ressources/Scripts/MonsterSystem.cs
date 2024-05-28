@@ -21,7 +21,7 @@ public class MonsterSystem : MonoBehaviour
     {
         if (player != null)
         {
-            transform.position = new Vector3(player.transform.position.x - 4.5f, -2.3f, -1);
+            transform.position = new Vector3(player.transform.position.x - 4.5f, -1.7f, -1);
             if (isKilling)
             {
                 KillPlayer();

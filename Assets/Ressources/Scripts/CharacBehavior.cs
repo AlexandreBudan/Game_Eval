@@ -8,7 +8,10 @@ public class CharacBehavior : MonoBehaviour
     public Rigidbody2D rb;
     public float vitesse;
     public float maxJump;
+    public Animator animator;
     public bool isGrounded;
+    private int isShifting = 0;
+    private int isJumping = 0;
     public float VulnerabilityTime;
 
     // Start is called before the first frame update
@@ -25,6 +28,14 @@ public class CharacBehavior : MonoBehaviour
         {
             Jump();
         }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isGrounded && isShifting == 0)
+        {
+            Shift();
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow) && isGrounded && isShifting == 1)
+        {
+            UnShift();
+        }
     }
 
     public void setVelocity(float xVelocity, float yVelocity)
@@ -35,15 +46,32 @@ public class CharacBehavior : MonoBehaviour
 
     public void Jump()
     {
+        isJumping = 1;
+        animator.SetInteger("IsJumping", isJumping);
         GameObject.Find("JumpSound").GetComponent<AudioSource>().Play(0);
         rb.velocity += new Vector2(0, maxJump);
         isGrounded = false;
+    }
+
+    public void Shift()
+    {
+        isShifting = 1;
+        animator.SetInteger("IsShifting", isShifting);
+        // GameObject.Find("ShiftSound").GetComponent<AudioSource>().Play(0);
+    }
+
+    public void UnShift()
+    {
+        isShifting = 0;
+        animator.SetInteger("IsShifting", isShifting);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            isJumping = 0;
+            animator.SetInteger("IsJumping", isJumping);
             isGrounded = true;
         }
     }
