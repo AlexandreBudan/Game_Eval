@@ -17,6 +17,7 @@ public class FeetDetector : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, transform.TransformDirection(Vector3.down), 0.2f);
         if (hit.collider != null && hit.collider.gameObject.CompareTag("Ground"))
         {
+            Debug.DrawRay(gameObject.transform.position, transform.TransformDirection(Vector3.down) * 0.2f, Color.yellow);
             hit.collider.isTrigger = false;
             player.GetComponent<CharacBehavior>().isGrounded = true;
         }
