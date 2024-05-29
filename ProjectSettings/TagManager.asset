@@ -12,6 +12,7 @@ TagManager:
   - Wave
   - Canvas
   - Boss
+  - Bullet
   layers:
   - Default
   - TransparentFX

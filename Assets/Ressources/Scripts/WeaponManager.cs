@@ -35,10 +35,10 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Vérifie si l'objet rencontré a le tag "ground" ou "boss"
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("Bullet"))
         {
             // Détruire cet objet
             Destroy(gameObject);

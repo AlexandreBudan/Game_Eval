@@ -28,9 +28,9 @@ public class Score : MonoBehaviour
     {
         currentScore += scoreToAdd * muliplier;
         gameObject.GetComponent<Text>().text = currentScore.ToString();
-        if (currentScore / 250.0f == (int)Math.Floor(currentScore / 250.0f))
+        if (currentScore / 50.0f == (int)Math.Floor(currentScore / 50.0f))
         {
-            PlayerPrefs.SetInt("Score", 250 *  (int)Math.Floor(currentScore / 250.0f));
+            PlayerPrefs.SetInt("Score", 50 *  (int)Math.Floor(currentScore / 50.0f));
         }
     }
 
