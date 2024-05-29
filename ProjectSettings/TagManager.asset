@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - CoinAmount
+  - Obstacle
+  - Monster
+  - WavePoint
+  - Wave
+  - Canvas
+  - Boss
+  - Bullet
   layers:
   - Default
   - TransparentFX
