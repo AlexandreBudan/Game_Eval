@@ -11,6 +11,8 @@ TagManager:
   - WavePoint
   - Wave
   - Canvas
+  - Boss
+  - Bullet
   layers:
   - Default
   - TransparentFX

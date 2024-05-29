@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,10 @@ public class Score : MonoBehaviour
     {
         currentScore += scoreToAdd * muliplier;
         gameObject.GetComponent<Text>().text = currentScore.ToString();
+        if (currentScore / 50.0f == (int)Math.Floor(currentScore / 50.0f))
+        {
+            PlayerPrefs.SetInt("Score", 50 *  (int)Math.Floor(currentScore / 50.0f));
+        }
     }
 
     private IEnumerator Scoring()
